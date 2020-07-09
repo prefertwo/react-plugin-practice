@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 
+import BasicTable from './BasicTable'
+
 class Index extends Component {
   constructor(props) {
     super(props);
@@ -10,9 +12,9 @@ class Index extends Component {
 
   render() {
     return (
-      // <PageHeaderWrapper>
-      <div>table</div>
-      // </PageHeaderWrapper>
+      <div>
+        <BasicTable />
+      </div>
     );
   }
 }

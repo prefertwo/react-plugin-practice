@@ -88,7 +88,7 @@ const footerRender = () => {
 };
 
 const BasicLayout = props => {
-  console.log('props====', props)
+  // console.log('props====', props)
   const {
     dispatch,
     children,

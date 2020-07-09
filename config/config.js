@@ -66,6 +66,7 @@ if (isAntDesignProPreview) {
   ]);
   plugins.push(['umi-plugin-antd-theme', themePluginConfig]);
 }
+// console.log(defaultSettings);
 
 export default {
   plugins,
@@ -114,17 +115,24 @@ export default {
     },
   },
   manifest: {
-    basePath: '/',
+    basePath: '/fof',
   },
   // chainWebpack: webpackPlugin,
-  // proxy: {
-  //   '/server/api/': {
-  //     target: 'https://preview.pro.ant.design/',
-  //     changeOrigin: true,
-  //     pathRewrite: { '^/server': '' },
-  //   },
-  // },
+  proxy: {
+    '/server/api/': {
+      target: 'https://preview.pro.ant.design/',
+      changeOrigin: true,
+      pathRewrite: { '^/server': '' },
+    },
+    '/manager': {
+      target: 'https://dev.simu800.com',
+      changeOrigin: true,
+      // pathRewrite: { '^/server': '' },
+    },
+    // ''
+  },
   base: '/',
+  // base: defaultSettings.baseUrl,
+  // publicPath: defaultSettings.baseUrl,
   history: 'browser',
 };
-

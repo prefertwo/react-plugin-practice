@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import styles from './index.less';
 import { router } from 'umi';
+import styles from './index.less';
 
 class Home extends Component {
   constructor(props) {
@@ -10,9 +10,11 @@ class Home extends Component {
     this.state = {};
   }
 
+  componentDidMount() {}
+
   handleRouter = item => {
-    router.push(`/antd/home/${item.router}`)
-  }
+    router.push(`/antd/${item.router}`);
+  };
 
   render() {
     const data = [
@@ -24,13 +26,13 @@ class Home extends Component {
       {
         id: 1,
         name: '表格',
-        router: 'table'
+        router: 'table',
       },
       {
         id: 2,
         name: '步骤条',
-        router: 'step'
-      }
+        router: 'step',
+      },
     ];
     return (
       <PageHeaderWrapper>

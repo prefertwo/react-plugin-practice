@@ -1,3 +1,16 @@
+let baseUrl = '';
+let HOST = process.env.HOST;
+if (HOST === 'simu800') {
+  baseUrl = '/dev.simu800.com/';
+} else if (HOST === 'xqfunds') {
+  baseUrl = '/xqfunds/simu/mobile/';
+} else {
+  baseUrl = '/gz/test/';
+}
+
+console.log('HOST==', HOST);
+console.log('baseUrl==', baseUrl);
+
 export default {
   navTheme: 'dark',
   // 拂晓蓝
@@ -11,7 +24,8 @@ export default {
   menu: {
     locale: true,
   },
-  title: 'FOF投管平台',
+  title: 'Ant Design',
   pwa: false,
   iconfontUrl: '',
+  // baseUrl,
 };

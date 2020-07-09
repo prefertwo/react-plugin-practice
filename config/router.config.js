@@ -11,6 +11,40 @@ export default [
         path: '/board',
         name: 'board',
         icon: 'smile',
+        component: './XingZheng/Manager/Board',
+      },
+      {
+        path: '/account',
+        name: 'crypto',
+        icon: 'smile',
+        component: './XingZheng/Manager/Account',
+      },
+      {
+        path: '/welcome',
+        component: './Welcome'
+      }
+    ]
+  },
+  {
+    component: './404',
+  },
+]
+
+
+
+/* export default [
+  {
+    path: '/',
+    component: '../layouts/BasicLayout',
+    routes: [
+      {
+        path: '/',
+        redirect: '/board'
+      },
+      {
+        path: '/board',
+        name: 'board',
+        icon: 'smile',
         component: './Welcome',
       },
       {
@@ -26,45 +60,61 @@ export default [
         ]
       },
       {
-        path: '/product',
-        name: 'product',
-        icon: 'edit',
+        path: '/chart',
+        name: 'chart',
+        icon: 'smile',
+        component: './AntdDemo/Charts'
+        // routes: [
+        //   {
+        //     path: '/draggable/basic',
+        //     name: 'basic',
+        //     component: './Draggable/Basic',
+        //   }
+        // ]
+      },
+      {
+        path: '/antd',
+        name: 'antd',
+        icon: 'smile',
+        // component: './AntdDemo'
         routes: [
           {
-            path: '/product/list',
-            name: 'list',
-            icon: 'smile',
-            component: './Welcome'
+            path: '/antd/dynamicform',
+            name: 'dynamicform',
+            component: './AntdDemo/Form'
+          },
+          {
+            path: '/antd/table',
+            name: 'table',
+            component: './AntdDemo/Table'
+          },
+          {
+            path: '/antd/steps',
+            name: 'step',
+            component: './AntdDemo/Step'
           }
         ]
       },
       {
-        path: '/transaction',
-        name: 'transaction',
-        icon: '',
-        routes: []
-      },
-      {
-        path: '/fofFound',
-        name: 'fofFound',
-        icon: '',
-        routes: []
-      },
-      {
-        path: '/company',
-        name: 'company',
-        icon: '',
-        routes: []
-      },
-      {
-        path: '/account',
-        name: 'account',
-        icon: '',
-        routes: []
+        path: '/handsontable',
+        name: 'handsontable',
+        icon: 'smile',
+        component: './HandsonTable/index'
+        // routes: [
+        //   {
+        //     path: '/draggable/basic',
+        //     name: 'basic',
+        //     component: './Draggable/Basic',
+        //   }
+        // ]
+
       }
     ]
-  }
-]
+  },
+  {
+    component: './404',
+  },
+] */
 /* [
   {
     path: '/user',

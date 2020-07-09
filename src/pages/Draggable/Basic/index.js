@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import Draggable from 'react-draggable';
 import { Row, Col, Alert } from 'antd';
@@ -52,7 +51,6 @@ export default class DraggableComponent extends React.Component {
   };
 
   render() {
-    const dataTop = [100, 150, 200, 300];
     const { deltaPosition } = this.state;
     const source = [
       {

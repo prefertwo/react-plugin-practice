@@ -1,6 +1,8 @@
+/* eslint-disable no-plusplus */
 import React, { Component } from 'react';
-import { Card, List, Form, message, Input, Button } from 'antd';
+import { Card, Form, Input, Button } from 'antd';
 import { router } from 'umi';
+
 const RULES = [
   {required: true, message: 'ddd'}
 ];
@@ -38,7 +40,7 @@ class Index extends Component {
     const { form } = this.props;
 
     const keys = form.getFieldValue('keys');
-    const nextKeys = keys.concat(CoreMemberNum++);
+    const nextKeys = keys.concat(CoreMemberNum++ );
     form.setFieldsValue({
       keys: nextKeys,
     });
@@ -60,9 +62,9 @@ class Index extends Component {
 
     form.setFieldsValue({
       keys: nextKeys,
-      name: name,
-      workYears: workYears,
-      workExperience: workExperience
+      name,
+      workYears,
+      workExperience
     });
     
   }
@@ -71,6 +73,7 @@ class Index extends Component {
     e.preventDefault();
     const {form} = this.props;
     form.validateFields((err, values) => {
+      // eslint-disable-next-line no-console
       console.log(values)
     })
 
@@ -81,13 +84,6 @@ class Index extends Component {
       form: { getFieldDecorator, getFieldValue },
     } = this.props;
 
-    const list = [
-      {
-        id: 0,
-        title: '动态增减表单',
-        href: 'dynamic',
-      },
-    ];
 
     // 核心人员
     const initkeys = getFieldValue('keys');
@@ -96,21 +92,21 @@ class Index extends Component {
     const keys = getFieldValue('keys');
     const CoreMemberItem = keys.map((k, index) => (
       <Card key={k}>
-        <Form.Item label={'姓名'}>
+        <Form.Item label="姓名">
           {getFieldDecorator(`name[${k}]`, {
-            initialValue: dataT[index].name,
+            initialValue: dataT[index] && dataT[index].name,
             rules: RULES,
           })(<Input placeholder="请输入姓名" />)}
         </Form.Item>
         <Form.Item label="投研相关工作年限">
           {getFieldDecorator(`workYears[${k}]`, {
-            initialValue: dataT[index].workYears,
+            initialValue: dataT[index] && dataT[index].workYears,
             rules: RULES,
           })(<Input placeholder="请输入相关工作年限" addonAfter="年" />)}
         </Form.Item>
-        <Form.Item label={'工作经历'}>
+        <Form.Item label="工作经历">
           {getFieldDecorator(`workExperience[${k}]`, {
-            initialValue: dataT[index].workExperience,
+            initialValue: dataT[index] && dataT[index].workExperience,
             rules: RULES,
           })(<Input placeholder="请输入相关工作经历" />)}
         </Form.Item>
@@ -122,7 +118,7 @@ class Index extends Component {
           <div style={{padding: '10px 20px', border: '1px solid #ccc', borderRadius: 4}} onClick={this.goSection.bind(this, item)}>{item.title}</div>
         ))} */}
 
-        <Form onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit} layout="inline">
           {CoreMemberItem}
 
           <Button onClick={this.addMore}>添加</Button>
