@@ -1,6 +1,7 @@
 /* eslint-disable consistent-return */
 import React, { Component } from 'react';
-import { Steps, Icon, message } from 'antd';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
+import { Steps, message } from 'antd';
 // import { steps } from '../../data';
 import styles from './index.less';
 
@@ -75,7 +76,7 @@ export default class LongStep extends Component {
       <div className={styles.step}>
         {stepData.length > showNumber + 1 ? (
           <span className={styles.iconWrap} onClick={this.prevMove}>
-            <Icon type="left" />
+            <LeftOutlined />
           </span>
         ) : (
           ''
@@ -101,7 +102,7 @@ export default class LongStep extends Component {
         </div>
         {stepData.length > showNumber + 1 ? (
           <span className={styles.iconWrap} onClick={this.nextMove}>
-            <Icon type="right" />
+            <RightOutlined />
           </span>
         ) : (
           ''

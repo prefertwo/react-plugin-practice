@@ -1,6 +1,8 @@
 /* eslint-disable no-plusplus */
 import React, { Component } from 'react';
-import { Card, Form, Input, Button } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Card, Input, Button } from 'antd';
 import { router } from 'umi';
 
 const RULES = [

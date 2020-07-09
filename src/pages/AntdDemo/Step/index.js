@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Steps, Icon, message, Divider, Alert } from 'antd';
+import { Card, Steps, message, Divider, Alert } from 'antd';
 import LongStep from './LongStep';
 // import LongStep from 'longstep'
 import { steps } from '../../data';

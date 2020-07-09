@@ -50,7 +50,7 @@
   "dependencies": {
     "@ant-design/pro-layout": "^4.10.0",
     "@antv/data-set": "^0.10.2",
-    "antd": "^3.23.6",
+    "antd": "^4.0.0",
     "bizcharts": "^3.5.8",
     "classnames": "^2.2.6",
     "crypto-js": "^4.0.0",
