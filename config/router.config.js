@@ -22,7 +22,10 @@ export default [
       {
         path: '/welcome',
         component: './Welcome'
-      }
+      },
+      {
+        component: './404',
+      },
     ]
   },
   {
